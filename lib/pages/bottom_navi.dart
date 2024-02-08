@@ -20,22 +20,23 @@ class _BottomState extends State<Bottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Column(),
+      body: IndexedStack(
+        index: 0,
+        children: [
+          HomeScreen(),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        items:  [
+        items: const [
           BottomNavigationBarItem(
-           icon: IconButton(onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen()));
-                }, icon: const Icon(Icons.home)),
+            icon: Icon(Icons.home),
             label: 'Home',
-            
           ),
-         const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
           ),
-         const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
