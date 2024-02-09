@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobportal/pages/availablejob.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -161,335 +162,344 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 15,
             ),
-            Row(
-              children: [
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.laptop,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Graphics & Design",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2350 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.laptop,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Graphics & Design",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
+                            Text(
+                              "2350 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.code,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Web Developer",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2310 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.code,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Web Developer",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
+                            Text(
+                              "2310 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.flutter_dash,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "App Developer",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2350 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.flutter_dash,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "App Developer",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
+                            Text(
+                              "2350 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.laptop_chromebook,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "MERN Developer",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2310 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.laptop_chromebook,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "MERN Developer",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
+                            Text(
+                              "2310 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.flutter_dash,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "App Developer",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2350 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.flutter_dash,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "App Developer",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
+                            Text(
+                              "2350 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 40,
-                  width: 150,
-                  margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.only(
-                      left: 10, right: 10, top: 5, bottom: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset:
-                            const Offset(0, 2), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.laptop_chromebook,
-                        size: 20,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "MERN Developer",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.green),
-                          ),
-                          Text(
-                            "2310 open position",
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              color: Colors.black45,
+                  Container(
+                    height: 40,
+                    width: 150,
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset:
+                              const Offset(0, 2), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.laptop_chromebook,
+                          size: 20,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "MERN Developer",
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.green),
                             ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
+                            Text(
+                              "2310 open position",
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                color: Colors.black45,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -503,6 +513,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.black),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Availablejob(),
           ],
         ),
       ),
