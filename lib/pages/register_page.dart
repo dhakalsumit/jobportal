@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/homescreen.dart';
 import 'package:jobportal/pages/log_in.dart';
@@ -30,30 +29,62 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 20,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.only(top: 30),
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  hintText: "Register as",
-                  prefixIcon: const Icon(
-                    Icons.person,
-                    color: Colors.green,
-                  ),
-                  suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        size: 30,
+              // TextField(
+              //   decoration: InputDecoration(
+              //     contentPadding: const EdgeInsets.only(top: 30),
+              //     border: const OutlineInputBorder(
+              //       borderRadius: BorderRadius.all(Radius.circular(10)),
+              //     ),
+              //     hintText: "Register as",
+              //     prefixIcon: const Icon(
+              //       Icons.person,
+              //       color: Colors.green,
+              //     ),
+              //     suffixIcon: IconButton(
+              //         onPressed: () {},
+              //         icon: const Icon(
+              //           Icons.arrow_drop_down,
+              //           size: 30,
+              //           color: Colors.green,
+              //         )),
+              //   ),
+              // ),
+              DropdownButtonFormField(
+                  borderRadius: BorderRadius.circular(20),
+                  decoration: InputDecoration(
+                      prefixIcon: const Icon(
+                        Icons.person,
                         color: Colors.green,
-                      )),
-                ),
-              ),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 8),
+                      hintText: "Register as",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8))),
+                  items: const [
+                    DropdownMenuItem(
+                      value: 12,
+                      child: Text("Heelllele"),
+                    ),
+                    DropdownMenuItem(
+                      value: 13,
+                      child: Text("Heelllele again "),
+                    ),
+                    DropdownMenuItem(
+                      value: 14,
+                      child: Text("Heelllele, again *2 "),
+                    ),
+                    DropdownMenuItem(
+                      value: 15,
+                      child: Text("Heelllele returns "),
+                    ),
+                  ],
+                  onChanged: (value) {}),
               const SizedBox(
                 height: 20,
               ),
               const TextField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
                     border: OutlineInputBorder(
@@ -69,6 +100,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 20,
               ),
               const TextField(
+                keyboardType: TextInputType.numberWithOptions(),
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
                     border: OutlineInputBorder(
