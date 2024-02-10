@@ -9,13 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
-        ],
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.logout))],
         centerTitle: true,
         title: const Text(
           "SN JOBS",

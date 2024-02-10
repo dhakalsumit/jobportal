@@ -46,30 +46,34 @@ class _LoginState extends State<Login> {
               const SizedBox(
                 height: 20,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.only(top: 30),
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  hintText: "Login as",
-                  prefixIcon: const Icon(
-                    Icons.person,
-                    color: Colors.green,
-                  ),
-                  suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        size: 30,
+              DropdownButtonFormField(
+                  borderRadius: BorderRadius.circular(20),
+                  decoration: InputDecoration(
+                      prefixIcon: const Icon(
+                        Icons.person,
                         color: Colors.green,
-                      )),
-                ),
-              ),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 8),
+                      hintText: "Login as",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                  items: const [
+                    DropdownMenuItem(
+                      value: 12,
+                      child: Text("Employer"),
+                    ),
+                    DropdownMenuItem(
+                      value: 13,
+                      child: Text("Job Seeker"),
+                    ),
+                  ],
+                  onChanged: (value) {}),
               const SizedBox(
                 height: 20,
               ),
               const TextField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
                     border: OutlineInputBorder(
@@ -85,6 +89,7 @@ class _LoginState extends State<Login> {
                 height: 20,
               ),
               const TextField(
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
                     border: OutlineInputBorder(

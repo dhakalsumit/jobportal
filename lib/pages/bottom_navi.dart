@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/homescreen.dart';
+import 'package:jobportal/pages/search.dart';
 
 class Bottom extends StatefulWidget {
   const Bottom({super.key});
@@ -21,9 +22,10 @@ class _BottomState extends State<Bottom> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
-        index: 0,
-        children: [
+        index: _selectedIndex,
+        children: const [
           HomeScreen(),
+          Search(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
