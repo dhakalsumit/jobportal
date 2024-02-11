@@ -14,7 +14,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.logout))],
+        actions: [IconButton(onPressed: (
+          
+        ) {}, icon: const Icon(Icons.logout))],
         centerTitle: true,
         title: const Text(
           "SN JOBS",

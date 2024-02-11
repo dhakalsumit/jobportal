@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jobportal/constants/dummy_jobs.dart';
+import 'package:jobportal/pages/app_form.dart';
+import 'package:jobportal/pages/job_description.dart';
 
 class Availablejob extends StatefulWidget {
   const Availablejob({super.key});
@@ -73,7 +76,7 @@ class _AvailablejobState extends State<Availablejob> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       role[index],
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 18,
                           fontStyle: FontStyle.italic,
                           color: Colors.grey),
@@ -83,7 +86,18 @@ class _AvailablejobState extends State<Availablejob> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(country[index]),
                   ),
-                  ElevatedButton(onPressed: () {}, child: Text("Job Details"))
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => JobDescription(
+                                description: myJobs[index],
+                                title: myJobs[index],
+                              ),
+                            ));
+                      },
+                      child: Text("Job Details"))
                 ],
               ),
             );
