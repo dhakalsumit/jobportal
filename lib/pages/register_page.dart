@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jobportal/pages/app_form.dart';
+
 import 'package:jobportal/pages/homescreen.dart';
 import 'package:jobportal/pages/log_in.dart';
 
@@ -144,10 +144,8 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ApplicationForm()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Login()));
                 },
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.white70)),

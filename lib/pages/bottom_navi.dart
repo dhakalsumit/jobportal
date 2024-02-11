@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/homescreen.dart';
+import 'package:jobportal/pages/jobs.dart';
+import 'package:jobportal/pages/my_application.dart';
 import 'package:jobportal/pages/search.dart';
 
 class Bottom extends StatefulWidget {
@@ -23,12 +25,10 @@ class _BottomState extends State<Bottom> {
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
-        children: const [
-          HomeScreen(),
-          Search(),
-        ],
+        children: const [HomeScreen(), Search(), Jobs(), MyApplication()],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -39,13 +39,13 @@ class _BottomState extends State<Bottom> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.book),
+            label: 'Jobs',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.menu),
-          //   label: 'Menu',
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.portrait),
+            label: 'My Application',
+          ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,

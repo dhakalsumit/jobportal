@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/constants/dummy_jobs.dart';
-import 'package:jobportal/pages/app_form.dart';
+
 import 'package:jobportal/pages/job_description.dart';
 
 class Availablejob extends StatefulWidget {
@@ -66,7 +66,7 @@ class _AvailablejobState extends State<Availablejob> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       job[index],
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.green),
@@ -92,12 +92,15 @@ class _AvailablejobState extends State<Availablejob> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => JobDescription(
-                                description: myJobs[index],
+                                role: role[index],
                                 title: myJobs[index],
+                                country: country[index],
+                                salary: salary[index],
+                                skills: skills[index],
                               ),
                             ));
                       },
-                      child: Text("Job Details"))
+                      child: const Text("Job Details"))
                 ],
               ),
             );

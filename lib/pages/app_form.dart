@@ -113,7 +113,7 @@ class _ApplicationFormState extends State<ApplicationForm> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text("Enter Your CV here"),
+                   const Text("Enter Your CV here"),
                     const SizedBox(
                       height: 10,
                     ),
