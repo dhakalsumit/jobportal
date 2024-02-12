@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:jobportal/pages/homescreen.dart';
 import 'package:jobportal/pages/jobs.dart';
 import 'package:jobportal/pages/my_application.dart';
+import 'package:jobportal/pages/post_job.dart';
 import 'package:jobportal/pages/search.dart';
 
 class Bottom extends StatefulWidget {
-  const Bottom({super.key});
+  final String type;
+  const Bottom({super.key, required this.type});
 
   @override
   State<Bottom> createState() => _BottomState();
@@ -22,14 +24,21 @@ class _BottomState extends State<Bottom> {
 
   @override
   Widget build(BuildContext context) {
+    print("Sumit");
+    print(widget.type);
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
-        children: const [HomeScreen(), Search(), Jobs(), MyApplication()],
+        children: [
+          HomeScreen(),
+          Search(),
+          Jobs(),
+          widget.type == "Job Seeker" ? MyApplication() : PostJob()
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        items: const [
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -42,10 +51,15 @@ class _BottomState extends State<Bottom> {
             icon: Icon(Icons.book),
             label: 'Jobs',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.portrait),
-            label: 'My Application',
-          ),
+          widget.type == "Job Seeker"
+              ? BottomNavigationBarItem(
+                  icon: Icon(Icons.portrait),
+                  label: 'My Application',
+                )
+              : BottomNavigationBarItem(
+                  icon: Icon(Icons.portrait),
+                  label: 'Post Application',
+                )
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobportal/pages/post_job.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -13,7 +14,12 @@ class _SearchState extends State<Search> {
     return Scaffold(
         appBar: AppBar(
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.logout))
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const PostJob()));
+                },
+                icon: const Icon(Icons.logout))
           ],
         ),
         body: const SingleChildScrollView(
