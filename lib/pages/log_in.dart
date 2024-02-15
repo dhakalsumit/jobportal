@@ -12,132 +12,166 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  String value = "Job Seeker";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 80, left: 20, right: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Text(
-                'SN JOB',
-                style: TextStyle(
-                    color: Color.fromARGB(221, 36, 21, 21),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40),
-              ),
-              const Text("You will get a job and be satisfied",
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  'SN JOB',
                   style: TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15)),
-              const SizedBox(
-                height: 20,
-              ),
-              const Image(
-                image: AssetImage(
-                  "images/login.png",
+                      color: Color.fromARGB(221, 36, 21, 21),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40),
                 ),
-                color: Colors.black,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.only(top: 30),
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                const Text("You will get a job and be satisfied",
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15)),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Image(
+                  image: AssetImage(
+                    "images/login.png",
                   ),
-                  hintText: "Login as",
-                  prefixIcon: const Icon(
-                    Icons.person,
-                    color: Colors.green,
-                  ),
-                  suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        size: 30,
+                  color: Colors.black,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                DropdownButtonFormField(
+                    borderRadius: BorderRadius.circular(20),
+                    decoration: InputDecoration(
+                        prefixIcon: const Icon(
+                          Icons.person,
+                          color: Colors.green,
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 8),
+                        hintText: "Login as",
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10))),
+                    items: const [
+                      DropdownMenuItem(
+                        value: "Employer",
+                        child: Text("Employer"),
+                      ),
+                      DropdownMenuItem(
+                        value: 'Job Seeker',
+                        child: Text("Job Seeker"),
+                      ),
+                    ],
+                    onChanged: (val) {
+                      value = val.toString();
+                    }),
+                const SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(top: 30),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      hintText: "Email",
+                      prefixIcon: Icon(
+                        Icons.email,
                         color: Colors.green,
                       )),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter email address';
+                    }
+                    return null;
+                  },
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(top: 30),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                const SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(top: 30),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
+                      hintText: "Password",
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.green,
+                      )),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter Password';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      // If the form is valid, display a snackbar. In the real world,
+                      // you'd often call a server or save the information in a database.
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Processing Data')),
+                      );
+                    }
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Bottom(
+                                  type: value,
+                                )));
+                  },
+                  style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.green)),
+                  child: const Center(
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(color: Colors.white),
                     ),
-                    hintText: "Email",
-                    prefixIcon: Icon(
-                      Icons.email,
-                      color: Colors.green,
-                    )),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(top: 30),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    ),
-                    hintText: "Password",
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      color: Colors.green,
-                    )),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Bottom()));
-                },
-                style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.green)),
-                child: const Center(
-                  child: Text(
-                    "Sign In",
-                    style: TextStyle(color: Colors.white),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    const TextSpan(
-                      text: "Don't have an account ?",
-                    ),
-                    TextSpan(
-                        text: ' Register Here',
-                        style: const TextStyle(
-                            decoration: TextDecoration.underline),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterPage()));
-                          }),
-                  ],
+                const SizedBox(
+                  height: 20,
                 ),
-              )
-            ],
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      const TextSpan(
+                        text: "Don't have an account ?",
+                      ),
+                      TextSpan(
+                          text: ' Register Here',
+                          style: const TextStyle(
+                              decoration: TextDecoration.underline),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const RegisterPage()));
+                            }),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

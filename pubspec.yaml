@@ -36,10 +36,20 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_form_builder: ^9.2.1
+  file_picker: ^6.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/icon.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+ 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

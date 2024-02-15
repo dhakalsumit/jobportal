@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:jobportal/pages/homescreen.dart';
 import 'package:jobportal/pages/log_in.dart';
 
@@ -60,23 +61,15 @@ class _RegisterPageState extends State<RegisterPage> {
                           horizontal: 20, vertical: 8),
                       hintText: "Register as",
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8))),
+                          borderRadius: BorderRadius.circular(10))),
                   items: const [
                     DropdownMenuItem(
                       value: 12,
-                      child: Text("Heelllele"),
+                      child: Text("Employer"),
                     ),
                     DropdownMenuItem(
                       value: 13,
-                      child: Text("Heelllele again "),
-                    ),
-                    DropdownMenuItem(
-                      value: 14,
-                      child: Text("Heelllele, again *2 "),
-                    ),
-                    DropdownMenuItem(
-                      value: 15,
-                      child: Text("Heelllele returns "),
+                      child: Text("Job Seeker"),
                     ),
                   ],
                   onChanged: (value) {}),

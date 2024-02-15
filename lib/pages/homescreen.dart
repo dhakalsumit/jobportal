@@ -13,9 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
-        ],
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.logout))],
         centerTitle: true,
         title: const Text(
           "SN JOBS",
@@ -507,7 +505,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Center(
               child: Text(
-                'ALL AVAILABLE JOBS',
+                'POPULAR JOBS',
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
