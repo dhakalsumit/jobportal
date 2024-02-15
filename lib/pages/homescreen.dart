@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   margin: const EdgeInsets.all(10),
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   margin: const EdgeInsets.all(10),
                   height: 70,
-                  width: 70,
+                  width: 76,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6),
                     color: Colors.green,
