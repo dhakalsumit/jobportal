@@ -15,7 +15,7 @@ class _AvailablejobState extends State<Availablejob> {
     "Sr. React Native Developer",
     "Sr. Flutter Developer",
     "Jr. MERN Stack Developer",
-    "Sr. MERN Stack Developer",
+    "Sr. MERN Stack Developer ",
     "Jr. Flutter Developer",
   ];
   final List<String> role = [
