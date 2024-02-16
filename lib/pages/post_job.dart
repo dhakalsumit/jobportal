@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:jobportal/pages/showdetails.dart';
 
 class PostJob extends StatefulWidget {
   const PostJob({super.key});
@@ -14,6 +15,12 @@ class _PostJobState extends State<PostJob> {
   String? imageName;
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _textFieldController1 = TextEditingController();
+  final TextEditingController _textFieldController2 = TextEditingController();
+  final TextEditingController _textFieldController3 = TextEditingController();
+  final TextEditingController _textFieldController4 = TextEditingController();
+  final TextEditingController _textFieldController5 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +48,7 @@ class _PostJobState extends State<PostJob> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: _textFieldController1,
                       decoration: const InputDecoration(
                         hintText: "Job Title",
                       ),
@@ -52,6 +60,7 @@ class _PostJobState extends State<PostJob> {
                       },
                     ),
                     TextFormField(
+                      controller: _textFieldController2,
                       decoration: const InputDecoration(
                         hintText: "Role",
                       ),
@@ -63,6 +72,7 @@ class _PostJobState extends State<PostJob> {
                       },
                     ),
                     TextFormField(
+                      controller: _textFieldController3,
                       decoration: const InputDecoration(
                         hintText: "Country ",
                       ),
@@ -74,6 +84,7 @@ class _PostJobState extends State<PostJob> {
                       },
                     ),
                     TextFormField(
+                      controller: _textFieldController4,
                       decoration: const InputDecoration(
                         hintText: "Salary",
                       ),
@@ -88,6 +99,7 @@ class _PostJobState extends State<PostJob> {
                       height: 10,
                     ),
                     TextFormField(
+                      controller: _textFieldController5,
                       decoration: const InputDecoration(
                         hintText: "Skills Required",
                       ),
@@ -105,11 +117,21 @@ class _PostJobState extends State<PostJob> {
                       onPressed: () {
                         // Validate returns true if the form is valid, or false otherwise.
                         if (_formKey.currentState!.validate()) {
-                          // If the form is valid, display a snackbar. In the real world,
+                          // If the form is valid, display a snack.bar. In the real world,
                           // you'd often call a server or save the information in a database.
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),
                           );
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ShowDetails(
+                                        jobtitle: _textFieldController1.text,
+                                        role: _textFieldController2.text,
+                                        country: _textFieldController3.text,
+                                        salary: _textFieldController4.text,
+                                        skills: _textFieldController5.text,
+                                      )));
                         }
                       },
                       child: const Text('Submit'),
