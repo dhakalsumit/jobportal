@@ -29,8 +29,14 @@ class _SearchState extends State<Search> {
                 height: 10,
               ),
               Padding(
-                  padding: EdgeInsets.only(left: 12, right: 10, top: 12),
-                  child: SearchBar())
+                padding: EdgeInsets.only(left: 12, right: 10, top: 12),
+                
+                child: SearchBar(
+                  
+                  hintText: "Search",
+                  
+                ),
+              ),
             ],
           ),
         ));

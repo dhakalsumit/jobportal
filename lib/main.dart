@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/log_in.dart';
+import 'package:jobportal/pages/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const Login(),
+      home: const SplashScreen(),
     );
   }
 }
