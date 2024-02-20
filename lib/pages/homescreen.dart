@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 20,
+              height: 21,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
