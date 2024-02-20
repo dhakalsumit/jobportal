@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/availablejob.dart';
+import 'package:jobportal/services/getpost.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getpost();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
