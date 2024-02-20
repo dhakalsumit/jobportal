@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/availablejob.dart';
+import 'package:jobportal/services/getpost.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getpost();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 20,
+              height: 21,
             ),
+<<<<<<< HEAD
             Container(
               child: Center(
                 child: Row(
@@ -40,6 +49,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         color: Colors.green,
+=======
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.green,
+                  ),
+                  child: const Column(
+                    children: [
+                      Icon(
+                        Icons.code,
+                        color: Colors.yellow,
+>>>>>>> 091ffae101ae8e2023a88ed59bee0c18e0245fd7
                       ),
                       child: const Column(
                         children: [
@@ -153,7 +180,96 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
+<<<<<<< HEAD
               ),
+=======
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 70,
+                  width: 76,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.green,
+                  ),
+                  child: const Column(
+                    children: [
+                      Icon(
+                        Icons.business,
+                        color: Colors.yellow,
+                      ),
+                      Text(
+                        "9122",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      Text(
+                        "Companies",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontSize: 13),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.green,
+                  ),
+                  child: const Column(
+                    children: [
+                      Icon(
+                        Icons.man,
+                        color: Colors.yellow,
+                      ),
+                      Text(
+                        "12345",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      Text(
+                        "job seeker",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontSize: 13),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.green,
+                  ),
+                  child: const Column(
+                    children: [
+                      Icon(
+                        Icons.person,
+                        color: Colors.yellow,
+                      ),
+                      Text(
+                        "12345",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      Text(
+                        "Employer",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300, color: Colors.white),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+>>>>>>> 091ffae101ae8e2023a88ed59bee0c18e0245fd7
             ),
             const SizedBox(
               height: 15,
