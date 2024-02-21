@@ -24,8 +24,6 @@ class _BottomState extends State<Bottom> {
 
   @override
   Widget build(BuildContext context) {
-    print("Sumit");
-    print(widget.type);
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,

@@ -45,7 +45,6 @@ class _AvailablejobState extends State<Availablejob> {
             return Container(
               padding: const EdgeInsets.all(5),
               margin: const EdgeInsets.all(5),
-              height: 20,
               width: 260,
               decoration: BoxDecoration(
                 color: Colors.white,

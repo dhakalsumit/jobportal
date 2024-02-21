@@ -37,240 +37,121 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 21,
             ),
-<<<<<<< HEAD
-            Container(
-              child: Center(
-                child: Row(
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  color: Colors.green,
+                ),
+                child: const Column(
                   children: [
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.green,
-=======
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.green,
-                  ),
-                  child: const Column(
-                    children: [
-                      Icon(
-                        Icons.code,
-                        color: Colors.yellow,
->>>>>>> 091ffae101ae8e2023a88ed59bee0c18e0245fd7
-                      ),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.code,
-                            color: Colors.yellow,
-                          ),
-                          Text(
-                            "12345",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            "live jobs",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),
-                          )
-                        ],
-                      ),
+                    Icon(
+                      Icons.code,
+                      color: Colors.yellow,
                     ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.green,
-                      ),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.business,
-                            color: Colors.yellow,
-                          ),
-                          Text(
-                            "9122",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            "Companies",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white,
-                                fontSize: 13),
-                          )
-                        ],
-                      ),
+                    Text(
+                      "12345",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
                     ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.green,
-                      ),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.man,
-                            color: Colors.yellow,
-                          ),
-                          Text(
-                            "12345",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            "job seeker",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white,
-                                fontSize: 13),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.green,
-                      ),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.person,
-                            color: Colors.yellow,
-                          ),
-                          Text(
-                            "12345",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            "Employer",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
+                    Text(
+                      "live jobs",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w300, color: Colors.white),
+                    )
                   ],
                 ),
-<<<<<<< HEAD
               ),
-=======
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  height: 70,
-                  width: 76,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.green,
-                  ),
-                  child: const Column(
-                    children: [
-                      Icon(
-                        Icons.business,
-                        color: Colors.yellow,
-                      ),
-                      Text(
-                        "9122",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
-                      Text(
-                        "Companies",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                            fontSize: 13),
-                      )
-                    ],
-                  ),
+              // ]),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  color: Colors.green,
                 ),
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.green,
-                  ),
-                  child: const Column(
-                    children: [
-                      Icon(
-                        Icons.man,
-                        color: Colors.yellow,
-                      ),
-                      Text(
-                        "12345",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
-                      Text(
-                        "job seeker",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                            fontSize: 13),
-                      )
-                    ],
-                  ),
+                child: const Column(
+                  children: [
+                    Icon(
+                      Icons.business,
+                      color: Colors.yellow,
+                    ),
+                    Text(
+                      "9122",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    Text(
+                      "Companies",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                          fontSize: 13),
+                    )
+                  ],
                 ),
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  height: 70,
-                  width: 70,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.green,
-                  ),
-                  child: const Column(
-                    children: [
-                      Icon(
-                        Icons.person,
-                        color: Colors.yellow,
-                      ),
-                      Text(
-                        "12345",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
-                      Text(
-                        "Employer",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300, color: Colors.white),
-                      )
-                    ],
-                  ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  color: Colors.green,
                 ),
-              ],
->>>>>>> 091ffae101ae8e2023a88ed59bee0c18e0245fd7
-            ),
+                child: const Column(
+                  children: [
+                    Icon(
+                      Icons.man,
+                      color: Colors.yellow,
+                    ),
+                    Text(
+                      "12345",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    Text(
+                      "job seeker",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                          fontSize: 13),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10),
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  color: Colors.green,
+                ),
+                child: const Column(
+                  children: [
+                    Icon(
+                      Icons.person,
+                      color: Colors.yellow,
+                    ),
+                    Text(
+                      "12345",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    Text(
+                      "Employer",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w300, color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+            ]),
             const SizedBox(
               height: 15,
             ),
@@ -290,6 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       height: 40,
@@ -405,6 +287,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       height: 40,
@@ -522,6 +405,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       height: 40,

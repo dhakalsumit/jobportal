@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jobportal/pages/log_in.dart';
 import 'package:jobportal/pages/splash_screen.dart';
 
 void main() {
