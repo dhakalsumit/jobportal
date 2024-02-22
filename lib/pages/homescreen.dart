@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text(
           "SN JOBS",
           style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
+              fontSize: 21, fontWeight: FontWeight.bold, color: Colors.green),
         ),
       ),
       body: SingleChildScrollView(
