@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:jobportal/pages/bottom_navi.dart';
 
 import 'package:jobportal/pages/register_page.dart';
+import 'package:jobportal/services/getpost.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -14,6 +15,15 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String value = "Job Seeker";
+  late final TextEditingController _emailController;
+  late final TextEditingController _passwordController;
+  @override
+  void initState() {
+    super.initState();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +89,7 @@ class _LoginState extends State<Login> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(top: 30),
@@ -101,6 +112,7 @@ class _LoginState extends State<Login> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(top: 30),
                       border: OutlineInputBorder(
@@ -126,6 +138,9 @@ class _LoginState extends State<Login> {
                     if (_formKey.currentState!.validate()) {
                       // If the form is valid, display a snackbar. In the real world,
                       // you'd often call a server or save the information in a database.
+                      services().login(_emailController.text.trim(),
+                          _passwordController.text, "RECRUITER");
+
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Processing Data')),
                       );

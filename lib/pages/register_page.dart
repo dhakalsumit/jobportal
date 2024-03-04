@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:jobportal/pages/homescreen.dart';
 import 'package:jobportal/pages/log_in.dart';
+import 'package:jobportal/services/getpost.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -11,7 +14,21 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  late final TextEditingController _emailController;
+  late final TextEditingController _passwordController;
+  late final TextEditingController _phoneNumberController;
+  String value = "";
+
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+    _phoneNumberController = TextEditingController();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -64,19 +81,22 @@ class _RegisterPageState extends State<RegisterPage> {
                           borderRadius: BorderRadius.circular(10))),
                   items: const [
                     DropdownMenuItem(
-                      value: 12,
+                      value: "RECRUITER",
                       child: Text("Employer"),
                     ),
                     DropdownMenuItem(
-                      value: 13,
+                      value: "JOBSEEKER",
                       child: Text("Job Seeker"),
                     ),
                   ],
-                  onChanged: (value) {}),
+                  onChanged: (val) {
+                    value = val.toString();
+                  }),
               const SizedBox(
                 height: 20,
               ),
-              const TextField(
+              TextField(
+                controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
@@ -92,7 +112,8 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 20,
               ),
-              const TextField(
+              TextField(
+                controller: _phoneNumberController,
                 keyboardType: TextInputType.numberWithOptions(),
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
@@ -108,7 +129,8 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 20,
               ),
-              const TextField(
+              TextField(
+                controller: _passwordController,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.only(top: 30),
                     border: OutlineInputBorder(
@@ -125,10 +147,17 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                  services().sinup(
+                    name : "Sumit",
+                      email: _emailController.text.trim(),
+                      password: _passwordController.text.trim(),
+                      role: value,
+                      Phonenumber: _phoneNumberController.text.trim());
+
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => const HomeScreen()));
                 },
                 style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.green)),

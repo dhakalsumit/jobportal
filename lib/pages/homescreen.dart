@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jobportal/pages/availablejob.dart';
 import 'package:jobportal/services/getpost.dart';
+import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getpost();
   }
 
   @override
