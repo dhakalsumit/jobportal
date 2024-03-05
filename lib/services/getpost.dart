@@ -26,17 +26,17 @@ class services {
       required String password,
       required String role,
       required String Phonenumber,
-      required String  name }) async {
+      required String name}) async {
     try {
-      print("lala");
+     
       final response = await http.post(
           Uri.parse("http://192.168.18.24:5051/api/v1/user/register"),
           body: {
-            "name" : name,
+            "name": name,
             "email": email,
             "password": password,
             "role": role,
-            "phone": Phonenumber,
+            "phone":Phonenumber,
           });
       print(response.body);
     } catch (error) {
