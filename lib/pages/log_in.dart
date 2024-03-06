@@ -14,7 +14,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  String value = "Job Seeker";
+  String value = "Job Seeker ";
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   @override
