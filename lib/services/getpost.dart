@@ -4,9 +4,7 @@ class services {
   static const String url = "";
   login(String email, String password, String role) async {
     try {
-      // print("here here");
-      // print(email);
-      // print(password);
+      
       final resposne = await http.post(
           Uri.parse("http://192.168.18.24:5051/api/v1/user/login"),
           body: {
@@ -17,7 +15,7 @@ class services {
       // print("body is ");
       print(resposne.body);
     } catch (error) {
-      // print("error is $error");
+
     }
   }
 
